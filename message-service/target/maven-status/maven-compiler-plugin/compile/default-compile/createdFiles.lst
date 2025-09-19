@@ -1,0 +1,15 @@
+com\greatkapital\messageservice\service\MessageServiceImpl.class
+com\greatkapital\messageservice\dto\EncryptedMessageDto.class
+com\greatkapital\messageservice\filter\JwtRequestFilter.class
+com\greatkapital\messageservice\config\SecurityConfig.class
+com\greatkapital\messageservice\dto\MessageRequest.class
+com\greatkapital\messageservice\controller\MessageController.class
+com\greatkapital\messageservice\entity\Message.class
+com\greatkapital\messageservice\config\RestTemplateConfig.class
+com\greatkapital\messageservice\dto\MessageResponse.class
+com\greatkapital\messageservice\dto\EncryptionRequest.class
+com\greatkapital\messageservice\util\JwtUtil.class
+com\greatkapital\messageservice\dto\EncryptionResponse.class
+com\greatkapital\messageservice\MessageserviceApplication.class
+com\greatkapital\messageservice\repository\MessageRepository.class
+com\greatkapital\messageservice\service\MessageService.class
