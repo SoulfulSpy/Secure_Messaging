@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "46724127-df39-414c-83a6-acc3107f6aab",
+		"name": "Secure Messaging Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "48601044",
+		"_collection_link": "https://shadesofdeblina-864805.postman.co/workspace/D-Nandy's-Workspace~7a57a8b0-521b-4134-871e-d3facfe06bd0/collection/48601044-46724127-df39-414c-83a6-acc3107f6aab?action=share&source=collection_link&creator=48601044"
+	},
+	"item": [
+		{
+			"name": "Authentication Service",
+			"item": [
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin_pass\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/auth/token"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Message Service",
+			"item": [
+				{
+					"name": "Message Service",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6WyJST0xFX0FETUlOIl0sInN1YiI6ImFkbWluIiwiaWF0IjoxNzU4Mjc2Mjk4LCJleHAiOjE3NTgzMTIyOTh9.4pGy6yDhMJT_Kx3ZIUn4-0DNV2B9Dz2rKlRqxNdIZ4KTmgtNUIqUbquYht5J2lSN"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"recipient\": \"admin\",\r\n    \"content\": \"This is a secret message!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8082/api/messages/send"
+					},
+					"response": []
+				},
+				{
+					"name": "Inbox",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6WyJST0xFX0FETUlOIl0sInN1YiI6ImFkbWluIiwiaWF0IjoxNzU4Mjc2Mjk4LCJleHAiOjE3NTgzMTIyOTh9.4pGy6yDhMJT_Kx3ZIUn4-0DNV2B9Dz2rKlRqxNdIZ4KTmgtNUIqUbquYht5J2lSN"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8082/api/messages/inbox"
+					},
+					"response": []
+				},
+				{
+					"name": "Received",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6WyJST0xFX0FETUlOIl0sInN1YiI6ImFkbWluIiwiaWF0IjoxNzU4Mjc2Mjk4LCJleHAiOjE3NTgzMTIyOTh9.4pGy6yDhMJT_Kx3ZIUn4-0DNV2B9Dz2rKlRqxNdIZ4KTmgtNUIqUbquYht5J2lSN"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8082/api/messages/received"
+					},
+					"response": []
+				},
+				{
+					"name": "send",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6WyJST0xFX0FETUlOIl0sInN1YiI6ImFkbWluIiwiaWF0IjoxNzU4Mjc2Mjk4LCJleHAiOjE3NTgzMTIyOTh9.4pGy6yDhMJT_Kx3ZIUn4-0DNV2B9Dz2rKlRqxNdIZ4KTmgtNUIqUbquYht5J2lSN"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8082/api/messages/sent"
+					},
+					"response": []
+				},
+				{
+					"name": "test",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6WyJST0xFX0FETUlOIl0sInN1YiI6ImFkbWluIiwiaWF0IjoxNzU4Mjc2Mjk4LCJleHAiOjE3NTgzMTIyOTh9.4pGy6yDhMJT_Kx3ZIUn4-0DNV2B9Dz2rKlRqxNdIZ4KTmgtNUIqUbquYht5J2lSN"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8082/api/messages/test"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Encryption Service",
+			"item": [
+				{
+					"name": "Encrypt",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"message\": \"Hello World\",\r\n    \"encryptionType\": \"AES\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/api/encrypt"
+					},
+					"response": []
+				},
+				{
+					"name": "Decrypt",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"message\": \"hIyGEq7EoE20/TRjd9dIOg==\",\r\n    \"encryptionType\": \"AES\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/api/decrypt"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
